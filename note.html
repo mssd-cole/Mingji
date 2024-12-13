@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mingji Notes</title>
+    <link rel="stylesheet" href="mainstyles.css" />
+    <script src="https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.3/firebase-auth.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyBq13UT4HLyTM4iDP9pc_NzfvewcqyZBwk",
+        authDomain: "mingji-605c7.firebaseapp.com",
+        databaseURL:
+          "https://mingji-605c7-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "mingji-605c7",
+        storageBucket: "mingji-605c7.firebasestorage.app",
+        messagingSenderId: "432577152055",
+        appId: "1:432577152055:web:74002d06550975938e2bb2",
+        measurementId: "G-J2TWZ4WMJS",
+      };
+      const app = firebase.initializeApp(firebaseConfig);
+      const auth = firebase.auth(app);
+    </script>
+  </head>
+  <body>
+    <div class="note-body">
+      <div class="recent-notes">
+        <h3>Recent Notes</h3>
+        <ul id="notes-list"></ul>
+      </div>
+      <div class="note-container">
+        <header class="bar">
+          <div class="logo">Mingji</div>
+          <h2 class="text">Notes field</h2>
+          <a href="try.html" class="home-icon">Home</a>
+        </header>
+        <main class="note-content">
+          <textarea
+            id="note-textarea"
+            class="writing-area"
+            placeholder="Write your notes here..."
+          ></textarea>
+          <div class="controls">
+            <button id="add-attachment">Add attachment</button>
+            <button id="save-note">Save Note</button>
+            <button id="clear-note">Clear Note</button>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="notescript.js"></script>
+  </body>
+</html>

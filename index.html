@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shantell+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.3/firebase-auth.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyBq13UT4HLyTM4iDP9pc_NzfvewcqyZBwk",
+        authDomain: "mingji-605c7.firebaseapp.com",
+        databaseURL:
+          "https://mingji-605c7-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "mingji-605c7",
+        storageBucket: "mingji-605c7.firebasestorage.app",
+        messagingSenderId: "432577152055",
+        appId: "1:432577152055:web:74002d06550975938e2bb2",
+        measurementId: "G-J2TWZ4WMJS",
+      };
+      const app = firebase.initializeApp(firebaseConfig);
+      const auth = firebase.auth(app);
+    </script>
+  </head>
+  <body>
+    <h2 class="heading">Welcome to Mingji</h2>
+
+    <div class="container">
+      <div class="login-box">
+        <h1 class="logo">Mingji</h1>
+        <form id="loginForm">
+          <input type="text" id="username" placeholder="Username" required />
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+          <button type="button" id="loginButton">Log in</button>
+          <div class="separator">__________ OR ___________</div>
+          <p class="signup">
+            Don’t have an account? <a href="signup.html">Sign up</a>
+          </p>
+        </form>
+      </div>
+      <div class="text">
+        <h3 class="subheading">We’re thrilled to have you here.</h3>
+        <p>
+          Just as the name suggests, "to engrave in one's memory", this space is
+          designed to help you remember deeply and cherish every moment.
+        </p>
+        <p>Dive in, explore, and create unforgettable memories with us</p>
+      </div>
+    </div>
+
+    <script src="loginscript.js"></script>
+  </body>
+</html>
